@@ -13,8 +13,8 @@ authors = ["rttf <contact@rttf.dev>"]
 [features]
 default = []
 tls = ["dep:embedded-tls", "dep:rand_core", "dep:rand_chacha"]
-defmt = ["dep:defmt", "embassy-net/defmt"]
-log = ["dep:log", "embassy-net/log"]
+defmt = ["dep:defmt", "embassy-net/defmt", "embedded-tls:defmt" ]
+log = ["dep:log", "embassy-net/log","embedded-tls:log" ]
 
 [dependencies]
 defmt = { version = "1.0.1", optional = true }
